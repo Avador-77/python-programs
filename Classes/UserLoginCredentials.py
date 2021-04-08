@@ -5,6 +5,7 @@ class Users():
         self.Lname = Lname
         self.City = City
         self.PinCode = PinCode
+        self.login_attempts = 0
     
     def describe_user(self):
 
@@ -15,12 +16,25 @@ class Users():
         fullName = self.Fname + " " + self.Lname
         print("Good Morning, " + fullName.title() + ".")
 
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+        print("Log In Attempts: ", self.login_attempts)
+    
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+        print("Re-setting Login Attempts: ", self.login_attempts)
+
 user1 = Users('rajat','sharma','udhampur', 182101)
 
 user1.greet_user()
 user1.describe_user()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.reset_login_attempts()
+user1.increment_login_attempts()
 
-user2 = Users('ashutosh','sharma','udhampur', 182101)
+"""user2 = Users('ashutosh','sharma','udhampur', 182101)
 
 user2.greet_user()
 user2.describe_user()
@@ -28,4 +42,4 @@ user2.describe_user()
 user3 = Users('begda','drenkad','londle', 182104)
 
 user3.greet_user()
-user3.describe_user()
+user3.describe_user()"""
