@@ -31,6 +31,11 @@ class Users():
 class Admin(Users):
     def __init__(self, Fname, Lname, City, PinCode):
         super().__init__(Fname, Lname, City, PinCode)
+        self.privileges = Privileges()
+    
+    
+class Privileges():
+    def __init__(self):
         self.privileges = ['can add post', 'can delete post','can ban user','can verify a post']
     
     def show_privileges(self):
@@ -39,11 +44,12 @@ class Admin(Users):
         for priv in self.privileges:
             print(i,".",priv,"\n")
             i += 1
+    
 
 admin = Admin('rajat','sharma','hiranagar',184142)
 admin.describe_user()
 
-admin.show_privileges()
+admin.privileges.show_privileges()
 #user1 = Users('rajat','sharma','udhampur', 182101)
 
 """user1.greet_user()
