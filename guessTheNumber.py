@@ -1,20 +1,49 @@
 import random
 
 def guess(x):
-    random_number = random.randint(1, x)
-
+    random_number = random.randrange(x)
+    chance  = 1
     guess = int(input(f"Guess a number between 1 to {x}:"))
-    while guess != random_number:
-        if guess < random_number:
-            print("nope, that's not correct. Too low.")
-            guess = int(input(f"Guess a number between 1 to {x} again:"))
+
+
+    active = True
+    while active:
+        while guess != random_number:
+            chance += 1
+            if chance != 5:
+                if guess < random_number:
+
+                
+                    
+
+                    if chance == 4:
+                        print("nope, that's not correct. Too low.")
+                        guess = int(input(f"----This is the last chance----Guess a number between 1 to {x} again:"))
+                    else:
+                        print("nope, that's not correct. Too low.")
+                        guess = int(input(f"Guess a number between 1 to {x} again:"))
+                    
+                else:
+
+                    if chance == 4:
+                        print("nope, that's not correct. Too high.")
+                        guess = int(input(f"----This is the last chance----Guess a number between 1 to {x} again:"))
+                    else:
+                        print("nope, that's not correct. Too high.")
+                        guess = int(input(f"Guess a number between 1 to {x} again:"))
+            
+            else:
+                print("You Lost!!")
+                break
+        if guess == random_number:
+            print(f"yeah, congratualtions. You guessed it, the number was {guess} ")
+        active = False
+
+    
         
-        else:
-            print("nope, that's not correct. Too high.")
-            guess = int(input(f"Guess a number between 1 to {x} again:"))
 
-    print(f"yeah, congratualtions. You guessed the number {guess} right")
+    
 
-
-guess(10)
+rangee = int(input("Enter the range: "))
+guess(rangee)
         
