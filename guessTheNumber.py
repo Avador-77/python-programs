@@ -39,11 +39,6 @@ def guess(x):
             print(f"yeah, congratualtions. You guessed it, the number was {guess} ")
         active = False
 
-    
-        
-
-    
-
 rangee = int(input("Enter the range: "))
 guess(rangee)
         
