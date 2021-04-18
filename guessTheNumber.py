@@ -33,6 +33,6 @@ def guess(x):
     if guess == random_number:
         print(f"yeah, congratualtions. You guessed it, the number was {guess} ")
 
-rangee = int(input("Enter the range: "))
+rangee = int(input("Enter the range in which you want to guess: "))
 guess(rangee)
         
