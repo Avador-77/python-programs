@@ -5,6 +5,6 @@ def sum_all(list_of_integers):
     
     return total
 
-nestedList = [[1,2,3],[4,5,6]]
+nestedList = [[1,2,3],[4,5,6],[4,3],[8,9,5,6]]
 
 print("The sum of all the nested lists is ",sum_all(nestedList))
