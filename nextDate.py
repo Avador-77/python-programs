@@ -32,7 +32,7 @@ def generate_next_date(day,month,year):
         
         
 
-    print(day,"-",month,"-",year)
+    print(day,"-",month,"-","20"+str(year))
 
 
-generate_next_date(28,2,2015)
+generate_next_date(1,9,15)
