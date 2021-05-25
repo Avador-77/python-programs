@@ -1,7 +1,6 @@
 #PF-Assgn-20
 
 def calculate_loan(account_number,salary,account_balance,loan_type,loan_amount_expected,customer_emi_expected):
-    eligible_loan_amount=0
     bank_emi_expected=0
     eligible_loan_amount=0
     
